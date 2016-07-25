@@ -129,7 +129,9 @@
             <td><?php echo $u->ID?></td>
             <td><?php echo $u->firstname?></td>
             <td><?php echo $u->lastname?></td>
-            <td><a href="<?php echo site_url('formcontroller/deluser')?>/<?php echo $u->ID?>"><button type="button" class="btn btn-danger">Delete</button></a> <button type="button" data-target="#updater" data-toggle="modal" data-id="<?php echo $u->ID?>" class="btn btn-success updateBtn">Update</button></a></td>
+            <td><a href="<?php echo site_url('formcontroller/deluser')?>/<?php echo $u->ID?>">
+              <button type="button" class="btn btn-danger">Delete</button></a>
+               <button type="button" data-target="#updater" data-toggle="modal" data-id="<?php echo $u->ID?>" class="btn btn-success updateBtn">Update</button></a></td>
  
     </tr>
          <?php endforeach?>
@@ -434,8 +436,12 @@
 <!-- jQuery Knob Chart -->
 <script src="<?php echo base_url();?>plugins/knob/jquery.knob.js"></script>
 <script src="<?php echo base_url();?>plugins/datatables/jquery.dataTables.min.js"></script>
+
 <script type="text/javascript">
-$('.submitBtn').on('click',function(){
+
+$('.submitBtn').on('click',function()
+{
+
 var post = new Object();
 post.firstname = $('#firstname').val();
 post.lastname = $('#lastname').val();
@@ -444,19 +450,24 @@ $.ajax({
   url : url,
   data : post,
   type: 'post',
-  success: function(response){
+  success: function(response)
+  {
  alert("data saved");
  $(".mytable").load(location.href+ ".mytable");
     }
+
 });
 });
-$('.updateBtn').on('click',function(){
+
+$('.updateBtn').on('click',function()
+{
 
   var id = $(this).data("id");
   var url = '<?php echo site_url("formcontroller/getUser")?>'+'/'+id;
   $.ajax({
     url: url,
-    success: function(response){
+    success: function(response)
+    {
       var data = $.parseJSON(response);
       $('#fnameModal').val(data.firstName);
       $('#lnameModal').val(data.lastName);
@@ -466,6 +477,35 @@ $('.updateBtn').on('click',function(){
 
   });
 })
+
+
+$('.updateUser').on('click',function()
+{
+
+
+var post = new Object();
+var id = $('#idmodal').val(); 
+post.firstname = $('#fnameModal').val();
+post.lastname   = $('#lnameModal').val();
+
+var url = '<?php echo site_url("formcontroller/submitupdated")?>' + '/' + id;
+ $.ajax({
+    url: url,
+    data : post,
+    type : 'post', 
+    success: function(response)
+    {
+      setTimeout(function{location.reload()},1000);
+
+    }
+
+  }); 
+
+
+$
+
+
+
 
 </script>
 <!-- daterangepicker -->

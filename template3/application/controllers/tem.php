@@ -27,6 +27,9 @@ class Tem extends CI_Controller {
 function insertuserdata()
 	{
 		$this->templatemodel->insertdata();
+
+		redirect('Tem/viewusers','refresh');
+
 	}
 
 

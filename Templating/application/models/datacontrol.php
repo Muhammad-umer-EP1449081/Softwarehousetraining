@@ -27,13 +27,16 @@ class Datacontrol extends CI_Model {
 	}
 	public function loginconditions()
 	{
+		
 		$where = array('username' => $_POST['username'], 'password' => $_POST['password'] );
 		$this->db->where($where);
 		return $this->db->get('login');
+		
 	}
 	public function insertaccount()
 	{
 		$this->db->insert('login',$_POST);
+
 	}
 	function get_user($id){
 		$this->db->where('ID',$id);

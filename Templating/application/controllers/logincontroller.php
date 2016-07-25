@@ -35,8 +35,9 @@ class Logincontroller extends CI_Controller {
 	}
 	public function submit()
 		{
-			// $this->datacontrol->insertaccount();
+			$this->datacontrol->insertaccount();
 			// redirect('Logincontroller','refresh');
+
 			echo "user submitted";
 		}
 		public function logout()

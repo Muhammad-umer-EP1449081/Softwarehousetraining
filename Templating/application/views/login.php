@@ -105,9 +105,9 @@ $(document).ready(function(){
 $('.registerBtn').on('click',function(){
 var post = new Object();
 post.username = $('#username').val();
-post.pass = $('#password').val();
+post.password = $('#password').val();
 post.email = $('#email').val();
-post.ph = $('#ph').val();
+post.phone = $('#ph').val();
 var url = '<?php echo site_url("logincontroller/submit") ?>';
 $.ajax({
   url : url,
