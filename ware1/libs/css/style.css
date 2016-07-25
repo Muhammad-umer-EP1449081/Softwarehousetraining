@@ -1,0 +1,103 @@
+@CHARSET "ISO-8859-1";
+
+.container {
+	
+}
+
+.navbar {
+	margin-bottom: 0px;
+	background-color: #f4511e;
+	border: 0;
+	front-size: 12px;
+	letter-spacing: 4px;
+	line-height: 1.428;
+	border-radius: 0;
+}
+
+.navbar li a, .navbar-band {
+	color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+	background-color: #fff !important;
+	color: #f4511e !important;
+}
+
+.navbar-header .btn {
+	/*WRITE YOU CSS HERE*/
+	
+}
+
+.left carousel-control, .right carousel-control {
+	color: #f4511e;
+}
+
+.container-fluid{
+	padding: 118px 50px;
+}
+
+.h2 {
+	margin-bottom: 50px ! important;
+}
+
+.h4 {
+	background-color: #f4511e ! important;
+	font-size19: px ! important;
+	margin-bottom: 50px ! important;
+	margin-top: 10;
+}
+
+.logo {
+	color: #f4511e;
+	font-size: 80px;
+}
+
+.bg-grey {
+	background-color: #f6f6f6 ! important;
+}
+
+.pak {
+	font-size: 80px;
+	
+
+}
+.pakitan {
+	font-size: 80px;
+	float: right;
+	padding-right: 30px;
+}
+.apk{
+	color: #f4511e;
+	background-color: #90A4AE;
+	padding: 20px;
+}
+
+
+
+/* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
